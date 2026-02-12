@@ -7,19 +7,19 @@
   {% if page.description %}
     <meta name="description" content="{{ page.description | strip }}">
   {% endif %}
-  <script type="text/javascript" src="/assets/js/vue.global.js"></script>
-  <link rel="preload" href="/assets/fonts/Assistant.ttf" as="font" type="font/ttf" crossorigin>
+  <script type="text/javascript" src="{{ '/assets/js/vue.global.js' | absolute_url }}"></script>
+  <link rel="preload" href="{{ '/assets/fonts/Assistant.ttf' | absolute_url }}" as="font" type="font/ttf" crossorigin>
   <style>
     @font-face {
-      font-family: 'Assistant';
+      font-family: "Assistant";
       font-stretch: 75% 125%;
       font-style: normal;
       font-weight: 200 800;
-      src: url('/assets/fonts/Assistant.ttf') format('truetype-variations'),
-           url('/assets/fonts/Assistant.ttf') format('truetype');
+      src: url("{{ '/assets/fonts/Assistant.ttf' | absolute_url }}") format("truetype-variations"),
+           url("{{ '/assets/fonts/Assistant.ttf' | absolute_url }}") format("truetype");
      }
   </style>
-  <link rel="stylesheet" type="text/css" href="{{ '/assets/css/index.css' | rev_asset }}">
+  <link rel="stylesheet" type="text/css" href="{{ '/assets/css/index.css' | absolute_url }}">
   {% if page.title %}
     <title>{{ page.title }} | {{ site.title }}</title>
   {% else %}
