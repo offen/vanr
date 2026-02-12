@@ -3,6 +3,29 @@
 @use "tachyons.scss";
 
 html {
+  width: 100%;
+  height: 100%;
   font-size: 22px;
 }
 
+body {
+  background-image: url('./../img/background-small.jpg');
+  background-size: calc(max(100%, 768px));
+  background-position: center bottom;
+}
+
+@media (min-width: 769px) {
+  body {
+    background-image: url('./../img/background-medium.jpg');
+  }
+}
+
+@media (min-width: 1201px) {
+  body {
+    background-image: url('./../img/background-large.jpg');
+  }
+}
+
+.darken {
+  background-color: rgba(0, 0, 0, 40%);
+}
