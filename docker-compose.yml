@@ -1,0 +1,15 @@
+services:
+  jekyll:
+    user: ${UID:-1000}:1000
+    build: .
+    ports:
+      - 4000:4000
+      - 35729:35729
+    command: bundle exec jekyll serve --host 0.0.0.0 --force_polling --livereload
+    working_dir: /home/jekyll/code/src
+    volumes:
+      - ${PWD:-./}/:/home/jekyll/code
+      - bundle_cache:/usr/local/bundle
+
+volumes:
+  bundle_cache:

@@ -1,0 +1,7 @@
+dist
+src/_site
+src/.sass-cache
+src/.jekyll-cache
+src/.jekyll-metadata
+src/vendor
+.bundle

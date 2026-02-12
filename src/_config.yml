@@ -1,0 +1,14 @@
+title: vanR architektur
+baseurl: ''
+url: http://localhost:4000
+
+defaults:
+  -
+    scope:
+      path: ''
+    values:
+      layout: base
+
+sass:
+  silence_deprecations:
+    - import

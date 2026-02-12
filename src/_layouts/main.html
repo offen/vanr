@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html class="no-js" lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  {% if page.description %}
+    <meta name="description" content="{{ page.description | strip }}">
+  {% endif %}
+  <script type="text/javascript" src="/assets/js/vue.global.js"></script>
+  <link rel="preload" href="/assets/fonts/Assistant.ttf" as="font" type="font/ttf" crossorigin>
+  <style>
+    @font-face {
+      font-family: 'Assistant';
+      font-stretch: 75% 125%;
+      font-style: normal;
+      font-weight: 200 800;
+      src: url('/assets/fonts/Assistant.ttf') format('truetype-variations'),
+           url('/assets/fonts/Assistant.ttf') format('truetype');
+     }
+  </style>
+  <link rel="stylesheet" type="text/css" href="{{ '/assets/css/index.css' | rev_asset }}">
+  {% if page.title %}
+    <title>{{ page.title }} | {{ site.title }}</title>
+  {% else %}
+    <title>{{ site.title }}</title>
+  {% endif %}
+</head>
+<script type="text/javascript">
+  document.documentElement.classList.remove('no-js');
+</script>
+{{ content }}
+</html>
