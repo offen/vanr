@@ -12,9 +12,9 @@
   <style>
     @font-face {
       font-family: "Assistant";
-      font-stretch: 75% 125%;
+      font-stretch: 100%;
       font-style: normal;
-      font-weight: 200 800;
+      font-weight: 600 800;
       src: url("{{ '/assets/fonts/Assistant.ttf' | absolute_url }}") format("truetype-variations"),
            url("{{ '/assets/fonts/Assistant.ttf' | absolute_url }}") format("truetype");
      }
@@ -29,5 +29,7 @@
 <script type="text/javascript">
   document.documentElement.classList.remove('no-js');
 </script>
-{{ content }}
+  <body class="sans-serif">
+    {{ content }}
+  </body>
 </html>

@@ -1,0 +1,135 @@
+
+// Converted Variables
+
+
+// Custom Media Query Variables
+
+
+/*
+
+  STYLES
+
+  Add custom styles here.
+
+*/
+
+@font-face {
+  font-family: Figtree;
+  font-display: block;
+  font-style: normal;
+  font-weight: 200;
+  src: local('Figtree Light'), local('Figtree-Light');
+  src: url('/assets/fonts/Figtree-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Figtree;
+  font-display: block;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Figtree Regular'), local('Figtree-Regular');
+  src: url('/assets/fonts/Figtree-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: figtree;
+  font-display: block;
+  font-style: normal;
+  font-weight: 500;
+  src: local('Figtree Medium'), local('Medium');
+  src: url('/assets/fonts/Figtree-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: figtree;
+  font-display: block;
+  font-style: normal;
+  font-weight: 700;
+  src: local('Figtree Bold'), local('Bold');
+  src: url('/assets/fonts/Figtree-Bold.ttf') format('truetype');
+}
+
+html {
+  font-size: clamp(16px, 1.25vw, 24px);
+}
+
+.of-contain {
+  object-fit: contain;
+}
+
+.of-cover {
+  object-fit: cover;
+}
+
+.op-center {
+  object-position: center center;
+}
+
+
+a:visited {
+  color: inherit;
+}
+
+.logo-asset {
+  height: 1.8rem;
+  margin-bottom: 0.45rem;
+}
+@media #{$breakpoint-not-small} {
+  .logo-asset {
+    height: 2.28rem;
+    top: 0.1rem;
+    margin-bottom: 0rem;
+  }
+}
+
+.link:focus {
+  outline: none;
+}
+
+html.no-js .dn-no-js {
+  display: none !important;
+}
+
+.image-container > :not(:first-child) {
+  margin-top: $spacing-large;
+}
+
+.project-section:first-child {
+  margin-top: 0;
+}
+
+body {
+  hyphens: auto;
+}
+
+@media #{$breakpoint-not-small} {
+  .bg-white-90-ns {
+    background-color: rgba($white, 0.9);
+  }
+  .index-item {
+    max-height: 68vh;
+  }
+  .index-item-limit-height {
+    height: 56vh;
+    min-height: 400px;
+  }
+
+  .index-item-overlay {
+    display: none;
+  }
+
+  .index-item:hover > .index-item-overlay {
+    display: flex;
+  }
+}
+
+.logo-asset {
+  transition: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .logo-asset {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
