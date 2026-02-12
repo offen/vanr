@@ -7,19 +7,19 @@
   {% if page.description %}
     <meta name="description" content="{{ page.description | strip }}">
   {% endif %}
-  <script type="text/javascript" src="{{ '/assets/js/vue.global.js' | absolute_url }}"></script>
-  <link rel="preload" href="{{ '/assets/fonts/Assistant.ttf' | absolute_url }}" as="font" type="font/ttf" crossorigin>
+  <script type="text/javascript" src="{{ '/assets/js/vue.global.js' | relative_url }}"></script>
+  <link rel="preload" href="{{ '/assets/fonts/Assistant.ttf' | relative_url | rev_asset }}" as="font" type="font/ttf" crossorigin>
   <style>
     @font-face {
       font-family: "Assistant";
       font-stretch: 100%;
       font-style: normal;
       font-weight: 600 800;
-      src: url("{{ '/assets/fonts/Assistant.ttf' | absolute_url }}") format("truetype-variations"),
-           url("{{ '/assets/fonts/Assistant.ttf' | absolute_url }}") format("truetype");
+      src: url("{{ '/assets/fonts/Assistant.ttf' | relative_url | rev_asset }}") format("truetype-variations"),
+           url("{{ '/assets/fonts/Assistant.ttf' | relative_url | rev_asset }}") format("truetype");
      }
   </style>
-  <link rel="stylesheet" type="text/css" href="{{ '/assets/css/index.css' | absolute_url }}">
+  <link rel="stylesheet" type="text/css" href="{{ '/assets/css/index.css' | relative_url | rev_asset }}">
   {% if page.title %}
     <title>{{ page.title }} | {{ site.title }}</title>
   {% else %}
