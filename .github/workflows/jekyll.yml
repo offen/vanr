@@ -18,7 +18,6 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
@@ -27,16 +26,22 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-      - name: Build with Jekyll
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4'
+          bundler-cache: false
+      - name: Install Gems
+        working-directory: ./src
+        run: bundle install
+      - name: Build
+        working-directory: ./src
         run: |
-          make setup
-          make build
-        env:
-          JEKYLL_ENV: production
+          JEKYLL_REV=$(git rev-parse --short HEAD) JEKYLL_ENV=production \
+            bundle exec jekyll build -d ./../dist -c '_config.yml,_config.prod.yml'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'dist/'
+          path: 'src/dist/'
 
   deploy:
     environment:
