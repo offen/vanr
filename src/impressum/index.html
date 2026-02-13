@@ -6,7 +6,8 @@ title: Impressum
 
 <div class="w-100 h-100 absolute flex justify-center top">
   <div class="relative container pr6-ns pr4">
-    <a class="dib absolute right-0 top-0 white x ir" href="/">X</a>
+    {% assign href = "/" %}
+    <a class="dib absolute right-0 top-0 white x ir" href="{{ href | relative_url }}">X</a>
     <h1 class="white f5-ns f6 ma0">
       Impressum
     </h1>
