@@ -1,12 +1,17 @@
-<footer>
-  <ul>
+<footer class="absolute bottom-0 pb4 w-100 tc">
+  <ul class="list pl0 ma0 inline-flex justify-between relative footer">
     <li>
-      <a class="link tracked" href="{{ include.href }}">
-        {{ include.text }}
+      {% if include.imprint %}
+      {% assign href = "/impressum" %}
+      <a class="white link tracked f4-ns f5" href="{{ href | relative_url }}">
+        Impressum
       </a>
+      {% else %}
+        &nbsp;
+      {% endif %}
     </li>
     <li>
-      <a class="link fw8 tracked" target="_blank" href="https://www.ringvanrittau.de">
+      <a class="white link fw8 tracked f4-ns f5" target="_blank" href="https://www.ringvanrittau.de">
         Bisheriger Auftritt
       </a>
     </li>

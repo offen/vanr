@@ -12,124 +12,99 @@
   Add custom styles here.
 
 */
-
-@font-face {
-  font-family: Figtree;
-  font-display: block;
-  font-style: normal;
-  font-weight: 200;
-  src: local('Figtree Light'), local('Figtree-Light');
-  src: url('/assets/fonts/Figtree-Light.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: Figtree;
-  font-display: block;
-  font-style: normal;
-  font-weight: 400;
-  src: local('Figtree Regular'), local('Figtree-Regular');
-  src: url('/assets/fonts/Figtree-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: figtree;
-  font-display: block;
-  font-style: normal;
-  font-weight: 500;
-  src: local('Figtree Medium'), local('Medium');
-  src: url('/assets/fonts/Figtree-Medium.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: figtree;
-  font-display: block;
-  font-style: normal;
-  font-weight: 700;
-  src: local('Figtree Bold'), local('Bold');
-  src: url('/assets/fonts/Figtree-Bold.ttf') format('truetype');
-}
-
 html {
-  font-size: clamp(16px, 1.25vw, 24px);
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-size: min(16px, 3.6vw);
+  background-color: black;
 }
 
-.of-contain {
-  object-fit: contain;
+.ir {
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  user-select: none;
+  background-color: currentColor;
 }
 
-.of-cover {
-  object-fit: cover;
+.ringvanrittau{
+  mask-image: url('./../img/ringvanrittau.svg');
+  width: 13.31rem;
+  height: 1.25rem;
 }
 
-.op-center {
-  object-position: center center;
-}
-
-
-a:visited {
-  color: inherit;
-}
-
-.logo-asset {
-  height: 1.8rem;
-  margin-bottom: 0.45rem;
-}
 @media #{$breakpoint-not-small} {
-  .logo-asset {
-    height: 2.28rem;
-    top: 0.1rem;
-    margin-bottom: 0rem;
+  .ringvanrittau {
+    width: 20rem;
+    height: 1.875rem;
   }
 }
 
-.link:focus {
-  outline: none;
+.vanrarchitektur{
+  /* Apply the SVG as a mask */
+  mask-image: url('./../img/vanrarchitektur.svg');
+  width: 21.25rem;
+  height: 1.625rem;
 }
 
-html.no-js .dn-no-js {
-  display: none !important;
+.x {
+  /* Apply the SVG as a mask */
+  mask-image: url('./../img/x.svg');
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
-.image-container > :not(:first-child) {
-  margin-top: $spacing-large;
+@media #{$breakpoint-not-small} {
+  .x {
+    width: 2.15rem;
+    height: 2.15rem;
+  }
 }
 
-.project-section:first-child {
-  margin-top: 0;
+.footer {
+  width: 21.25rem;
 }
 
+@media #{$breakpoint-not-small} {
+  .vanrarchitektur {
+    width: 45.75rem;
+    height: 3.25rem;
+  }
+  .footer {
+    width: 45.75rem;
+  }
+}
+
+.container {
+  width: 21.25rem;
+}
+
+@media #{$breakpoint-not-small} {
+  .container {
+    width: 45.75rem;
+  }
+}
+
+.top {
+  padding-top: 256px;
+}
+
+/*
 body {
-  hyphens: auto;
+  background-image: url('./../img/background-small.jpg');
+  background-size: calc(max(100%, 768px));
+  background-position: center bottom;
 }
 
-@media #{$breakpoint-not-small} {
-  .bg-white-90-ns {
-    background-color: rgba($white, 0.9);
-  }
-  .index-item {
-    max-height: 68vh;
-  }
-  .index-item-limit-height {
-    height: 56vh;
-    min-height: 400px;
-  }
-
-  .index-item-overlay {
-    display: none;
-  }
-
-  .index-item:hover > .index-item-overlay {
-    display: flex;
+@media (min-width: 769px) {
+  body {
+    background-image: url('./../img/background-medium.jpg');
   }
 }
 
-.logo-asset {
-  transition: none;
-}
-
-@media screen and (max-width: 1024px) {
-  .logo-asset {
-    transform: none !important;
-    opacity: 1 !important;
+@media (min-width: 1201px) {
+  body {
+    background-image: url('./../img/background-large.jpg');
   }
 }
+*/

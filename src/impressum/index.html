@@ -4,9 +4,21 @@ description: Description TBD.
 title: Impressum
 ---
 
-<div class="w-100 h-100 absolute ma0 pa0 darken">
-  <div class="relative">
-    <h1>Impressum</h1>
-    {% include footer.html text='Home' href='/' %}
+<div class="w-100 h-100 absolute flex justify-center top">
+  <div class="relative container pr6-ns pr4">
+    <a class="dib absolute right-0 top-0 white x ir" href="/">X</a>
+    <h1 class="white f5-ns f6 ma0">
+      Impressum
+    </h1>
+    <p class="white f5-ns f6 lh-title">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+    <p class="white f5-ns f6 lh-title">
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p class="white f5-ns f6 lh-title">
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
   </div>
+  {% include footer.html imprint=false %}
 </div>
