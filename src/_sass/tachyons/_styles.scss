@@ -33,13 +33,6 @@ html {
   height: 1.25rem;
 }
 
-@media #{$breakpoint-not-small} {
-  .ringvanrittau {
-    width: 20rem;
-    height: 1.875rem;
-  }
-}
-
 .vanrarchitektur{
   /* Apply the SVG as a mask */
   mask-image: url('./../img/vanrarchitektur.svg');
@@ -54,32 +47,34 @@ html {
   height: 1.25rem;
 }
 
+
+
 @media #{$breakpoint-not-small} {
+  .vanrarchitektur {
+    width: 45.75rem;
+    height: 3.5rem;
+  }
   .x {
     width: 2.15rem;
     height: 2.15rem;
+  }
+  .ringvanrittau {
+    width: 20rem;
+    height: 1.875rem;
   }
 }
 
 .footer {
   width: 21.25rem;
 }
-
-@media #{$breakpoint-not-small} {
-  .vanrarchitektur {
-    width: 45.75rem;
-    height: 3.25rem;
-  }
-  .footer {
-    width: 45.75rem;
-  }
-}
-
 .container {
   width: 21.25rem;
 }
 
 @media #{$breakpoint-not-small} {
+  .footer {
+    width: 45.75rem;
+  }
   .container {
     width: 45.75rem;
   }
