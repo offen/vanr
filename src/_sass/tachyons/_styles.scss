@@ -82,22 +82,43 @@ html {
   padding-top: min(25vh, 256px);
 }
 
-/*
+$darken-transparency: 0.4;
+
 body {
-  background-image: url('./../img/background-small.jpg');
-  background-size: calc(max(100%, 768px));
-  background-position: center bottom;
+  background-image:
+    url('./../img/background-small.jpg');
+  background-size: cover;
+  background-position: 50% 100%;
 }
 
-@media (min-width: 769px) {
+body.darken {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, $darken-transparency), rgba(0, 0, 0, $darken-transparency)),
+    url('./../img/background-small.jpg');
+}
+
+@media #{$breakpoint-not-small} {
   body {
-    background-image: url('./../img/background-medium.jpg');
+    background-position: 50% 92%;
+    background-image:
+      url('./../img/background-medium.jpg');
+  }
+  body.darken {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, $darken-transparency), rgba(0, 0, 0, $darken-transparency)),
+      url('./../img/background-medium.jpg');
   }
 }
 
-@media (min-width: 1201px) {
+@media #{$breakpoint-large} {
   body {
-    background-image: url('./../img/background-large.jpg');
+    background-position: 50% 85%;
+    background-image:
+      url('./../img/background-large.jpg');
+  }
+  body.darken {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, $darken-transparency), rgba(0, 0, 0, $darken-transparency)),
+      url('./../img/background-large.jpg');
   }
 }
-*/
