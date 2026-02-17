@@ -30,7 +30,7 @@ html {
 }
 
 .ringvanrittau{
-  animation: scale-down 90s cubic-bezier(0.3, 0.7, 0.1, 1) forwards;
+  animation: scale-down 60s cubic-bezier(0.3, 0.7, 0.1, 1) forwards;
   @supports (mask-image: url('')) or (-webkit-mask-image: url('')) {
     mask-image: url('./../img/ringvanrittau.svg');
   }
@@ -40,7 +40,7 @@ html {
 }
 
 .vanrarchitektur{
-  animation: scale-up 90s cubic-bezier(0.3, 0.7, 0.1, 1) forwards;
+  animation: scale-up 60s cubic-bezier(0.3, 0.7, 0.1, 1) forwards;
   @supports (mask-image: url('')) or (-webkit-mask-image: url('')) {
     mask-image: url('./../img/vanrarchitektur.svg');
   }
