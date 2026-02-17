@@ -21,26 +21,36 @@ html {
 }
 
 .ir {
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  user-select: none;
-  background-color: currentColor;
+  @supports (mask-image: url('')) or (-webkit-mask-image: url('')) {
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    user-select: none;
+    background-color: currentColor;
+  }
 }
 
 .ringvanrittau{
-  mask-image: url('./../img/ringvanrittau.svg');
+  animation: scale-down 90s cubic-bezier(0.3, 0.7, 0.1, 1) forwards;
+  @supports (mask-image: url('')) or (-webkit-mask-image: url('')) {
+    mask-image: url('./../img/ringvanrittau.svg');
+  }
   width: 13.31rem;
   height: 1.25rem;
 }
 
 .vanrarchitektur{
-  mask-image: url('./../img/vanrarchitektur.svg');
+  animation: scale-up 90s cubic-bezier(0.3, 0.7, 0.1, 1) forwards;
+  @supports (mask-image: url('')) or (-webkit-mask-image: url('')) {
+    mask-image: url('./../img/vanrarchitektur.svg');
+  }
   width: 21.25rem;
   height: 1.625rem;
 }
 
 .x {
-  mask-image: url('./../img/x.svg');
+  @supports (mask-image: url('')) or (-webkit-mask-image: url('')) {
+    mask-image: url('./../img/x.svg');
+  }
   width: 1.25rem;
   height: 1.25rem;
 }
@@ -115,4 +125,14 @@ body.darken {
       linear-gradient(rgba(0, 0, 0, $darken-transparency), rgba(0, 0, 0, $darken-transparency)),
       url('./../img/background-large.jpg');
   }
+}
+
+@keyframes scale-up {
+  from { transform: scale(0.85); }
+  to { transform: scale(1.15); }
+}
+
+@keyframes scale-down {
+  from { transform: scale(1.1); }
+  to { transform: scale(0.8); }
 }
